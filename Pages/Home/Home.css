@@ -1,0 +1,63 @@
+.HomeTitleContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.HomeTitleContainerLine {
+    flex: 1;
+    height: 1.5px;
+    background-color: #19376D;
+    margin: 0 10px;
+
+}
+
+.HomeTitleContainerTitle {
+    color: #576CBC;
+    font-size: 2rem;
+    font-weight: 200;
+
+}
+
+.HomeTitleContainerSpecialText {
+    display: inline-block;
+    animation: rotate 10s infinite linear;
+    -webkit-animation: rotate 10s infinite linear;
+}
+
+.HomeChoice {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #19376D;
+
+    font-weight: bolder;
+
+
+}
+
+.HomeMethodsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+.MethodLink {
+    text-decoration: none;
+    color: #A5D7E8;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}

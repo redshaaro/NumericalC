@@ -1,0 +1,62 @@
+.SecantTitle{
+    text-align: center;
+    color: #576CBC;
+    margin-top: 1rem;
+}
+.SecantForm{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    border:#19376D 2px solid;
+    padding:1rem;
+    margin-top: 3rem;
+}
+.SecantInput{
+    
+    background-color: #A5D7E8;
+    padding:5px 10px;
+    border: none;
+    width: 50%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #576CBC;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.SecantInput:focus{
+    outline: none;
+     
+
+}
+.SecantSubmit{
+    background-color: #A5D7E8;
+    width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.OutPut{
+     
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    color: #A5D7E8;
+
+   
+}
+.SecantResult{
+      color: #576CBC; 
+      font-weight: bolder;
+}

@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+import Home from "../Pages/Home/Home";
+import FixedPoint from "../Pages/FixedPoint/FixedPoint";
+
+import MSecant from "../Pages/MSecant/MSecant";
+import NewtonRaphson from "../Pages/NewtonRaphson/NewtonRaphson";
+import Secant from "../Pages/Secant/Secant";
+import ContactMe from "../Pages/ContactMe/ContactMe";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/FixedPoint" element={<FixedPoint></FixedPoint>}></Route>
+        <Route path="/MSecant" element={<MSecant></MSecant>}></Route>
+        <Route
+          path="/NewtonRaphson"
+          element={<NewtonRaphson></NewtonRaphson>}
+        ></Route>
+        <Route path="/Secant" element={<Secant></Secant>}></Route>
+        <Route path="/about" element={<ContactMe></ContactMe>}></Route>
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
