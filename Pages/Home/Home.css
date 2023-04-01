@@ -55,6 +55,30 @@
     text-decoration: none;
     color: #A5D7E8;
 }
+.typing-animation{
+    margin-top: 2rem;
+    text-align: center;
+    padding: 2rem;
+    
+}
+.typing-animation p {
+    color: #576CBC;
+    font-size: 2rem;
+    display: inline-block;
+    overflow: hidden;
+    animation: typing 3s steps(20, end);
+    -webkit-animation: typing 3s steps(20, end);
+}
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
 
 @keyframes rotate {
     100% {

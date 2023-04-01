@@ -25,12 +25,18 @@ const Home = () => {
         {Methods.map((method, i) => (
           <Link className="MethodLink" to={method.Link} key={i}>
             <div className="HomeMethod">
-               
               <span>{method.Name}</span>
             </div>
           </Link>
         ))}
+        
       </div>
+      <div class="typing-animation">
+          <p>
+            Hello there, just a small note: Equations are written in this form
+            2*x^2-2*x-3 enjoy it !
+          </p>
+        </div>
     </>
   );
 };
