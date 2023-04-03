@@ -60,3 +60,20 @@
       color: #576CBC; 
       font-weight: bolder;
 }
+@media  (max-width: 410px) {
+    form{
+        padding: 2rem !important;
+    }
+    .SecantTitle{
+        margin-top: 2rem;
+    }
+    .SecantForm input{
+        width: 100%;
+    }
+ 
+
+
+
+
+
+}
