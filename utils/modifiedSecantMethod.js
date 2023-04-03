@@ -1,5 +1,5 @@
 export default function secantMethod(eqStre, a, b, tol) {
-  const modifiedEqu = eqStr.replace(/([a-zA-Z0-9])\^/g, "$1**"); //modifing the equation back to js rules
+  const modifiedEqu = eqStr.replace(/([a-zA-Z0-9])\^/g, "$1**").toLowerCase() //modifing the equation back to js rules
   const eq = new Function("x", `return ${modifiedEqu}`);
   const iterations = Math.round(Math.log((b - a) / tol) / Math.log(2));
   let c = (b - eq(b) * ((b - a) / (eq(b) - eq(a)))).toFixed(4);

@@ -4,7 +4,7 @@ export default function newtonraphson(eqStr, a, b, tol) {
   try {
     const der = derivative(eqStr, "x").toString();
     const dereq = new Function("x", `return ${der}`); //The first derivative equation
-    const modifiedEqu = eqStr.replace(/([a-zA-Z0-9])\^/g, "$1**"); //modifing the equation back to js rules
+    const modifiedEqu = eqStr.replace(/([a-zA-Z0-9])\^/g, "$1**").toLowerCase() //modifing the equation back to js rules
     const eq = new Function("x", `return ${modifiedEqu}`); //normal function
     let xi = a;
     let funX = eq(xi);
