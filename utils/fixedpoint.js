@@ -1,23 +1,25 @@
-export default function fixedpoint(eqStr, x0, tol, n) {
-  // Step 1: Modify the equation into JS-compatible syntax
-  const modifiedEq = eqStr.replace(/([a-zA-Z0-9])\^/g, "$1**");
+export default function fixedPointIteration(eqStr, a, tol, n) {
+  try {
+    const modifiedEqu = eqStr.replace(/([a-zA-Z0-9])\^/g, "$1**").toLowerCase();
+    const eq = new Function("x", `return ${modifiedEqu}`);
 
-  // Step 2: Define eq1 and eq2 as functions
-  const eq1 = new Function("x", `return ${modifiedEq}`);
-  const g = (x) => eq1(x) + x;
+    let xi = a;
+    let funX = eq(xi);
+    let gx = (x) => Number(eq(x)) + Number(x);
+    let funGx = gx(xi);
 
-  let x = x0;
-  for (let i = 0; i < n; i++) {
-    const prevX = x;
-    x = g(x);
+    for (let i = 0; i < n && Math.abs(funX) > tol; i++) {
+      if (i === n) {
+        break;
+      }
+      xi = gx(xi);
+      funX = eq(xi);
 
-    // Check for convergence
-    if (Math.abs(x - prevX) < tol) {
-      return x;
+      console.log(xi);
     }
-  }
-  console.log(x);
 
-  // If the iteration did not converge within n iterations, return null to indicate failure
-  return null;
+    return xi;
+  } catch (err) {
+    console.log(err);
+  }
 }

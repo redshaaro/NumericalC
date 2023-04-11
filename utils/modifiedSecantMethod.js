@@ -1,4 +1,4 @@
-export default function secantMethod(eqStre, a, b, tol) {
+export default function secantMethod(eqStr, a, b, tol) {
   const modifiedEqu = eqStr.replace(/([a-zA-Z0-9])\^/g, "$1**").toLowerCase() //modifing the equation back to js rules
   const eq = new Function("x", `return ${modifiedEqu}`);
   const iterations = Math.round(Math.log((b - a) / tol) / Math.log(2));
